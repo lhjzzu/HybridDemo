@@ -1,0 +1,5 @@
+target 'HybridDemo' do
+
+pod 'AFNetworking'
+
+end
