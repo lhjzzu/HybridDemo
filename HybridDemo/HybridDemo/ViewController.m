@@ -9,12 +9,13 @@
 #import "AFNetworking.h"
 #import <objc/runtime.h>
 #import "ViewController.h"
+#import "DVCommodityListVC.h"
 #import "NSURLProtocolHybrid.h"
+#import "DVCommodityDetailVC.h"
+#import "DVWebviewController.h"
 #import "WebViewJavascriptBridge.h"
 #import "UIViewController+HybridError.h"
-#define Home_URL  [NSString stringWithFormat:@"http://%@/%@?%@=%@",@"m.kkkd.com",@"cms/home",@"appKey",@"962b586e1e3412ca43e88699c96cb3re"]
-
-#define WS(wSelf)           __weak typeof(self) wSelf = self;
+#define WS(wSelf)    __weak typeof(self) wSelf = self;
 static char *handlerNameKey;
 static char *handlerDataKey;
 
@@ -43,7 +44,7 @@ static char *handlerDataKey;
     //3 根据webview创建并定义bridge
     [self defineWebViewBridge];
     //4 载入h5
-    NSURLRequest *request  = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:Home_URL]];
+    NSURLRequest *request  = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://m.kkkd.com/cms/home?appKey=962b586e1e3412ca43e88699c96cb3re"]];
     [webView loadRequest:request];
     
 }
@@ -196,14 +197,14 @@ static char *handlerDataKey;
             NSString *vcString = paramDic[@"vc"];
             //假如有商品详情界面，且类名为DVCommodityDetailVC
             if ([vcString isEqualToString:@"DVCommodityDetailVC"]) {
-//                DVCommodityDetailVC *detailVC = [[DVCommodityDetailVC alloc] init];
+                DVCommodityDetailVC *detailVC = [[DVCommodityDetailVC alloc] init];
 //                detailVC.productId = paramDic[@"id"];
 //                detailVC.hidesBottomBarWhenPushed = YES;
-//                [self.navigationController pushViewController:detailVC animated:YES];
+                [self.navigationController pushViewController:detailVC animated:YES];
             }
             //假如有商品列表界面，且类名为DVCommodityDetailVC
             if ([vcString isEqualToString:@"DVCommodityListVC"]) {
-//                DVCommodityListVC *listVC = [[DVCommodityListVC alloc] init];
+                DVCommodityListVC *listVC = [[DVCommodityListVC alloc] init];
 //                listVC.category = [paramDic objectForKey:@"category"];
 //                listVC.kwd = [paramDic objectForKey:@"kwd"];
 //                listVC.tag = [paramDic objectForKey:@"tag"];
@@ -213,7 +214,7 @@ static char *handlerDataKey;
 //                listVC.freePost = [[paramDic objectForKey:@"freePost"] boolValue];
 //                listVC.recommend = [[paramDic objectForKey:@"recommend"] boolValue];
 //                listVC.hidesBottomBarWhenPushed = YES;
-//                [self.navigationController pushViewController:listVC animated:YES];
+                [self.navigationController pushViewController:listVC animated:YES];
             }
         } else {
             
@@ -227,18 +228,19 @@ static char *handlerDataKey;
                 return YES;
             }
             //假如跳转后的界面也是一个h5
-//            DVWebViewController *webViewController = [[DVWebViewController alloc] init];
+            DVWebviewController *webViewController = [[DVWebviewController alloc] init];
 //            webViewController.url = urlString;
 //            webViewController.hidesBottomBarWhenPushed = YES;
-//            [self.navigationController pushViewController:webViewController animated:YES];
+            [self.navigationController pushViewController:webViewController animated:YES];
         }
         return NO;
     } else if (navigationType == UIWebViewNavigationTypeOther) {
         NSDictionary *hyErrorDic = [HybridTool HybridErrorProperties];
         NSString *hyErrorStr = [hyErrorDic objectForKey:@"error"];
         if ([request.URL.path hasSuffix:hyErrorStr]) {
-            
             //加载出错的错误处理
+            // do something with code 
+            
             return NO;
         }
         

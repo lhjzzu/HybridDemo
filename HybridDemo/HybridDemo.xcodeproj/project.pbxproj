@@ -25,6 +25,9 @@
 		0645A3121CF403C9006AE690 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0645A30C1CF403C9006AE690 /* WebViewJavascriptBridge.m */; };
 		0645A3131CF403C9006AE690 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0645A30E1CF403C9006AE690 /* WebViewJavascriptBridgeBase.m */; };
 		0645A3141CF403C9006AE690 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0645A3101CF403C9006AE690 /* WKWebViewJavascriptBridge.m */; };
+		0645A3171CF418A3006AE690 /* DVCommodityDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0645A3161CF418A3006AE690 /* DVCommodityDetailVC.m */; };
+		0645A31A1CF418FC006AE690 /* DVCommodityListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0645A3191CF418FC006AE690 /* DVCommodityListVC.m */; };
+		0645A3201CF41954006AE690 /* DVWebviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0645A31F1CF41954006AE690 /* DVWebviewController.m */; };
 		B170A080C608DC9D03E539D9 /* libPods-HybridDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B68F2558545F144F5513CEEC /* libPods-HybridDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +84,12 @@
 		0645A30E1CF403C9006AE690 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
 		0645A30F1CF403C9006AE690 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		0645A3101CF403C9006AE690 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		0645A3151CF418A3006AE690 /* DVCommodityDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVCommodityDetailVC.h; sourceTree = "<group>"; };
+		0645A3161CF418A3006AE690 /* DVCommodityDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVCommodityDetailVC.m; sourceTree = "<group>"; };
+		0645A3181CF418FC006AE690 /* DVCommodityListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVCommodityListVC.h; sourceTree = "<group>"; };
+		0645A3191CF418FC006AE690 /* DVCommodityListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVCommodityListVC.m; sourceTree = "<group>"; };
+		0645A31E1CF41954006AE690 /* DVWebviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVWebviewController.h; sourceTree = "<group>"; };
+		0645A31F1CF41954006AE690 /* DVWebviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVWebviewController.m; sourceTree = "<group>"; };
 		2037A90710B5ABFEDEA210E5 /* Pods-HybridDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HybridDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HybridDemo/Pods-HybridDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B68F2558545F144F5513CEEC /* libPods-HybridDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HybridDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70284DE2473AF2F549939E8 /* Pods-HybridDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HybridDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HybridDemo/Pods-HybridDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +150,12 @@
 				0645A2BF1CF2A44A006AE690 /* AppDelegate.m */,
 				0645A2C11CF2A44A006AE690 /* ViewController.h */,
 				0645A2C21CF2A44A006AE690 /* ViewController.m */,
+				0645A3151CF418A3006AE690 /* DVCommodityDetailVC.h */,
+				0645A3161CF418A3006AE690 /* DVCommodityDetailVC.m */,
+				0645A3181CF418FC006AE690 /* DVCommodityListVC.h */,
+				0645A3191CF418FC006AE690 /* DVCommodityListVC.m */,
+				0645A31E1CF41954006AE690 /* DVWebviewController.h */,
+				0645A31F1CF41954006AE690 /* DVWebviewController.m */,
 				0645A2EE1CF2A484006AE690 /* Hybrid */,
 				0645A3091CF403C9006AE690 /* WebViewJavascriptBridge */,
 				0645A2C71CF2A44A006AE690 /* Assets.xcassets */,
@@ -419,12 +434,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0645A2C31CF2A44A006AE690 /* ViewController.m in Sources */,
+				0645A3171CF418A3006AE690 /* DVCommodityDetailVC.m in Sources */,
 				0645A2FE1CF2A484006AE690 /* NSURLProtocolHybrid.m in Sources */,
 				0645A3021CF2A484006AE690 /* Reachability.m in Sources */,
 				0645A2C01CF2A44A006AE690 /* AppDelegate.m in Sources */,
 				0645A3031CF2A484006AE690 /* UIViewController+HybridError.m in Sources */,
 				0645A3141CF403C9006AE690 /* WKWebViewJavascriptBridge.m in Sources */,
 				0645A3131CF403C9006AE690 /* WebViewJavascriptBridgeBase.m in Sources */,
+				0645A3201CF41954006AE690 /* DVWebviewController.m in Sources */,
+				0645A31A1CF418FC006AE690 /* DVCommodityListVC.m in Sources */,
 				0645A2BD1CF2A44A006AE690 /* main.m in Sources */,
 				0645A2FD1CF2A484006AE690 /* HybridConstant.m in Sources */,
 				0645A3011CF2A484006AE690 /* NSString+Sha1.m in Sources */,
