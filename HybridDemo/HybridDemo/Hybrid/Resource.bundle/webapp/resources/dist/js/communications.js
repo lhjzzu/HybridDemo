@@ -34,7 +34,7 @@
         bridge = WVJB;
         bridge.init();
         //设置webview标题
-        setTitle(' ');
+        setTitle('h5设置的标题');
 
         /**
          * 注册Js Alert事件

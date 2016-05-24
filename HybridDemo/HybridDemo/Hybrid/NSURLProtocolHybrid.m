@@ -116,15 +116,15 @@ static NSString *const kRedirectRequestKey = @"redirectRequest";
     NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     NSString *fileName = [[[aRequest URL] absoluteString] sha1];
     NSString *path = [cachesPath stringByAppendingPathComponent:fileName];
-//    DLog(@"cachesPath ==  %@",path);
-//    DLog(@"requestURL ==  %@",self.request.URL);
+//    NSLog(@"cachesPath ==  %@",path);
+//    NSLog(@"requestURL ==  %@",self.request.URL);
     
     return path;
 }
 
 + (BOOL)canInitWithRequest:(NSURLRequest*)theRequest
 {
-    NSLog(@"theRequest.URL0 == %@",theRequest.URL);
+    NSLog(@"theRequest.URL == %@",theRequest.URL);
     
     NSDictionary *properties = [HybridTool hybridProperties];
     NSString *urlPath = theRequest.URL.path;
